@@ -44,6 +44,10 @@ Please note the best practices below suggest methods to change webserver configu
   ```
 - IIS
   Visit https://scotthelme.co.uk/hardening-your-http-response-headers/#public-key-pinning
+  
+  # X-Frame-Options
+  
+  -----------------------------------------------------------------------------------------------------------
 
 
 

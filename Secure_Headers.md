@@ -69,15 +69,107 @@ Please note the best practices below suggest methods to change webserver configu
 - IIS
   Visit https://scotthelme.co.uk/hardening-your-http-response-headers/#x-frame-options
 
+# X-XSS-Protection
+
+-----------------------------------------------------------------------------------------------------------
+Add appropriate snippet into configuration file.
+
+- Apache
+  ```
+  Header set X-XSS-Protection: 1; mode=block
+  ```
+- nginx
+  ```
+  add_header X-XSS-Protection "1;mode=block";
+  ```
+- lighttpd
+  ```
+  setenv.add-response-header = ("X-XSS-Protection" => "1; mode=block",)
+  ```
+- IIS
+  Visit https://scotthelme.co.uk/hardening-your-http-response-headers/#x-xss-protection
+
+# X-Content-Type-Options
+
+-----------------------------------------------------------------------------------------------------------
+
+Add appropriate snippet into configuration file.
+
+- Apache
+  ```
+  Header set X-Content-Type-Options: nosniff
+  ```
+- nginx
+  ```
+  add_header X-Content-Type-Options "nosniff";
+  ```
+- lighttpd
+  ```
+  setenv.add-response-header = ("X-Content-Type-Options" => "nosniff",)
+  ```
+- IIS
+  Visit https://scotthelme.co.uk/hardening-your-http-response-headers/#x-content-type-options
+
+# Content-Security-Policy
+
+-----------------------------------------------------------------------------------------------------
+
+Add appropriate snippet into configuration file.
+
+- Apache
+  ```
+  Header set Content-Security-Policy "script-src 'self'; object-src 'self'"
+  ```
+- nginx
+  ```
+  add_header Content-Security-Policy "script-src 'self'; object-src 'self'";
+  ```
+- lighttpd
+  ```
+  setenv.add-response-header = ("Content-Security-Policy" => "script-src 'self'; object-src 'self'",)
+  ```
+- IIS
+  Visit https://scotthelme.co.uk/hardening-your-http-response-headers/#content-security-policy
+
+# X-Permitted-Cross-Domain-Policies
+
+------------------------------------------------------------------------------------------------------
+
+Add appropriate snippet into configuration file.
+
+- Apache
+  ```
+  Header set X-Permitted-Cross-Domain-Policies: none
+  ```
+- nginx
+  ```
+  add_header X-Permitted-Cross-Domain-Policies "none";
+  ```
+- lighttpd
+  ```
+  setenv.add-response-header = ("X-Permitted-Cross-Domain-Policies" => "none",)
+  ```
+- IIS
+  [update needed]
 
 
+# Referrer-Policy
 
+--------------------------------------------------------------------------------------------------------
 
+- Apache
+  [update needed]
 
+- nginx
+  [update needed]
 
+- lighttpd
+  [update needed]
 
+- IIS
+  [update needed]
 
-
+# Have fun with nu11secur1ty =)
 
 
 

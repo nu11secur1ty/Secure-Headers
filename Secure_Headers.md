@@ -3,9 +3,8 @@ Please note the best practices below suggest methods to change webserver configu
 
 # HTTP Strict Transport Security (HSTS)
 
-.      Apache
-
-    Edit your apache configuration file and add the following to your VirtualHost.
+- Apache
+  Edit your apache configuration file and add the following to your VirtualHost.
     ```
     Header always set Strict-Transport-Security "max-age=63072000; includeSubdomains"
     ```

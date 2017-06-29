@@ -24,7 +24,8 @@ Please note the best practices below suggest methods to change webserver configu
   
  
 # Public Key Pinning Extension for HTTP (HPKP)
--------------------------------------------------------------------------------------------------------------\
+-------------------------------------------------------------------------------------------------------------
+
 
 - Apache
   Edit your apache configuration file and add the following to your VirtualHost.

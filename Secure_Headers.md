@@ -51,13 +51,23 @@ Please note the best practices below suggest methods to change webserver configu
   
 -----------------------------------------------------------------------------------------------------------
 
-
-
-
-
-
-
-
+- Apache
+  Add this line below into your site's configuration to configure Apache to send X-Frame-Options header for all pages.
+  ```
+  Header set X-Frame-Options DENY
+  ```
+- nginx
+  Add snippet below into configuration file to send X-Frame-Options header.
+  ```
+  add_header X-Frame-Options "DENY";
+  ```
+- lighttpd
+  Add snippet below into configuration file to send X-Frame-Options header.
+  ```
+  setenv.add-response-header = ("X-Frame-Options" => "DENY",)
+  ```
+- IIS
+  Visit https://scotthelme.co.uk/hardening-your-http-response-headers/#x-frame-options
 
 
 

@@ -22,4 +22,41 @@ Please note the best practices below suggest methods to change webserver configu
 - IIS
   Visit https://scotthelme.co.uk/hardening-your-http-response-headers/#strict-transport-security
   
-  
+ 
+# Public Key Pinning Extension for HTTP (HPKP)
+-------------------------------------------------------------------------------------------------------------\
+
+- Apache
+  Edit your apache configuration file and add the following to your VirtualHost.
+  ```
+      Header set Public-Key-Pins "pin-sha256=\"klO23nT2ehFDXCfx3eHTDRESMz3asj1muO+4aIdjiuY=\";    pin-sha256=\"633lt352PKRXbOwf4xSEa1M517scpD3l5f79xMD9r9Q=\"; max-age=2592000; includeSubDomains"
+  ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
